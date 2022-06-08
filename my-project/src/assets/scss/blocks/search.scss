@@ -1,0 +1,21 @@
+.search {
+    background-color: $primary;
+    max-width: 21rem;
+    width: 100%;
+}
+
+
+.search__input {
+    // Убераем бек и бордер
+    background: transparent;
+    border: none;
+
+    // наследуем шрифты 
+    font-family: inherit;
+    font-size: 1.2rem;
+    color: $white;
+
+    &::placeholder {
+        color: rgba($white, .4);
+    }
+}
