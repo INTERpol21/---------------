@@ -19,8 +19,29 @@
     
     <div class="page">
         <!-- Header -->
-        <header class="header">header</header>
-
+        <header class="header">
+            <div class="header__left">
+                <nav class="nav">
+                    <ul>
+                        <li>
+                            <a href="#">Главная</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__right">
+                <nav class="nav">
+                    <ul>
+                        <li>
+                            <a href="#">Профиль</a>
+                        </li>
+                    </ul>
+                </nav>
+                <form action="/" method="post">
+                    <input type="text">
+                </form>
+            </div>
+        </header>
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="sidebar__header">
@@ -49,9 +70,19 @@
                             </a>
                         </li>
                     </ul>
+                    <div class="profile__text">
+                        <p>Будущий Front-end разработчик. Создаю landings, практикую многостаночники. Имею опыт в таких языках
+                            как HTML/CSS/JS/Python. Данный сайт верстался с помощью модуля Sass и таск-менеджера Gulp. Языков
+                            HTML/CSS/JS.
+                        </p>
+                    </div>
+        
                 </div>
+            </div> <!-- sidebar__content -->
+            <div class="sidebar__footer">
+                <a class="btn btn--red" href="#">Мои работы </a>
+                <button class="btn btn--blue" type="button">Написать мне</button>
             </div>
-            <div class="sidebar__footer"></div>
         </aside>
         <!-- Main -->
         <main class="main">
