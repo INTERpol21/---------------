@@ -1,22 +1,54 @@
+.nav__item {
+    position: relative;
+
+    &:hover {
+        .nav__link {
+            background-color: $blue;
+        }
+
+        // При наведение(hover), будем показывать дочерний класс(.>subnav)
+        >.subnav {
+            display: block;
+        }
+
+    }
+}
 
 .nav__list {
-  display: flex;
+    display: flex;
 }
 
 .nav__link {
-  display: block;
-  padding: 1.5rem;
+    display: block;
+    padding: 1.35rem;
 
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  color: $white;
-  text-decoration: none;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: $white;
+    text-decoration: none;
 
-  transition: background-color .2s linear;
+    transition: background-color .2s linear;
 
-  &:hover {
-    background-color: $blue;
-  }
+
+    &.has-subnav {
+        position: relative;
+        padding-right: 3.5rem;
+
+        &::after {
+            content: "";
+            display: block;
+            margin-top: 2px;
+
+            border-style: solid;
+            border-width: 6px 5px 0 5px;
+            border-color: $white transparent;
+
+            position: absolute;
+            top: 50%;
+            right: 1.35rem;
+            transform: translateY(-50%);
+
+        }
+    }
 }
-
-

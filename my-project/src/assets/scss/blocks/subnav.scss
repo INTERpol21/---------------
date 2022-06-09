@@ -1,0 +1,50 @@
+// subnav или навигация под блоком nav/header
+.subnav {
+    display: none;
+
+    width: 16.5rem;
+    padding: .5rem 0;
+
+    // закругляем 2 нижних угла 
+    border-radius: 0 0 10px 10px;
+    background-color: $blue;
+
+    position: absolute;
+    // Делаем отступ от верха, что бы навигация начиналась с низу блока nav/header
+    top: 100%;
+    left: 0;
+
+    box-shadow: 0 6px 8px rgba($black, .2);
+
+    .subnav__link {
+        font-size: 1.2rem;
+        color: $white;
+
+        display: block;
+        text-decoration: none;
+        padding: 0.45rem 1.2rem;
+
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover {
+            background-color: darken($blue, 10%);
+        }
+
+    }
+}
+
+// .subnav__link{
+//     font-size: 1.2rem;
+//     color: $white;
+
+//     display: block;
+//     text-decoration: none;
+//     padding:0.45rem 1.2rem;
+
+//     transition: background-color 0.2s ease-in-out;
+
+//     &:hover{
+//        background-color: darken($blue, 10%); 
+//     }
+
+// }

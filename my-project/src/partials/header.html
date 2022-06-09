@@ -5,12 +5,27 @@
                 <li>
                     <a class="nav__link" href="#">Главная</a>
                 </li>
-                <li>
-                    <a class="nav__link" href="#">Статьи</a>
+                <!-- nav__item создан, что бы при наведение на кнопку навигации, после блок не исчезал -->
+                <li class="nav__item">
+                    <a class="nav__link has-subnav" href="#">Статьи</a>
+
+                    <ul class="subnav">
+                        <li>
+                            <a class="subnav__link" href="#">Языки программирования</a>
+                        </li>
+                        <li>
+                            <a class="subnav__link" href="#">Проекты</a>
+                        </li>
+                        <li>
+                            <a class="subnav__link" href="#">Фишки</a>
+                        </li>
+                    </ul>
                 </li>
+
                 <li>
                     <a class="nav__link" href="#">Обо мне</a>
                 </li>
+
                 <li>
                     <a class="nav__link" href="#">Реклама</a>
                 </li>
@@ -20,8 +35,11 @@
     <div class="header__right">
         <nav class="nav">
             <ul class="nav__list">
-                <li>
+                <li class="nav__item">
                     <a class="nav__link" href="#">Профиль</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#">Выйти</a>
                 </li>
             </ul>
         </nav>

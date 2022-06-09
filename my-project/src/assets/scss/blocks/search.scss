@@ -6,9 +6,13 @@
 
 
 .search__input {
+    display: block;
+    width: 100%;
     // Убераем бек и бордер
     background: transparent;
     border: none;
+
+    padding: 1.2rem 2rem;
 
     // наследуем шрифты 
     font-family: inherit;
