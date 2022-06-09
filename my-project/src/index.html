@@ -3,4 +3,173 @@ layout: default
 title: Home
 ---
 
-Hello!
+<div class="stories">
+    <div class="stories__item">
+        <img class="stories__preview" src="assets/images/stories/omsk.jpg" alt="Омск">
+        <div class="stories__tittle">Город Омск</div>
+        <time class="stories__date" datetime="2022-06-08 20:21">08.06.2022</time>
+    </div>
+    <div class="stories__item">
+        <img class="stories__preview" src="assets/images/stories/ints2.jpg" alt="Закат">
+        <div class="stories__tittle">Закат</div>
+        <time class="stories__date" datetime="2022-06-18 20:21">18.06.2022</time>
+    </div>
+    <div class="stories__item">
+        <img class="stories__preview" src="assets/images/stories/code.jpg" alt="код jS">
+        <div class="stories__tittle">Код </div>
+        <time class="stories__date" datetime="2022-05-08 20:21">Everyday</time>
+    </div>
+    <div class="stories__item">
+        <img class="stories__preview" src="assets/images/stories/prog.jpg" alt=" Девиз">
+        <div class="stories__tittle">Расписание</div>
+        <time class="stories__date" datetime="2022-06-08 20:21">Everyday</time>
+    </div>
+</div>
+
+
+<!-- POST -->
+<div class="add-post">
+    <form class="add-post__form" action="/" method="post">
+        <textarea class="add-post__textarea" name="post-text" placeholder="Записки админа"></textarea>
+
+        <div class="add-post__form-actions">
+            <label class="add-post__file" for="add-post-file">
+                <input type="file" id="add-post-file">
+            </label>
+            <button class="add-post__send" type="submit"><img src="assets/images/send.svg" alt="Отправить"></button>
+        </div>
+    </form>
+</div>
+
+
+<!-- post1 -->
+<div class="post">
+    <div class="post__content">
+        <p class="post__text">
+            Lorem ipsum или Рыба текст. Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда
+            нужно быстро заполнить макеты или прототипы
+            содержимым. Это тестовый контент, который не должен нести никакого смысла, лишь показать наличие самого
+            текста или
+            продемонстрировать типографику в деле.
+        </p>
+    </div>
+    <div class="post__footer">
+        <ul class="post__data">
+            <li>
+                <time datetime="2022-06-09 16:22">09-06-2022</time>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- post2 -->
+<article class="post">
+    <div class="post__header">
+        <img class="post__preview" src="assets/images/post/post1.png" alt="Lorem ipsum">
+    </div>
+
+    <div class="post__content">
+        <h2 class="post__title">
+            <a href="#"> Что такое Lorem ipsum или рыба! </a>
+        </h2>
+        <p class="post__text">
+            Lorem ipsum — классический текст-«рыба» (условный, зачастую бессмысленный текст-заполнитель, вставляемый в
+            макет
+            страницы). Является искажённым отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и
+            зла»,
+            написанного в 45 году до н. э. на латинском языке
+        </p>
+    </div>
+    <div class="post__footer">
+        <ul class="post__data">
+            <li class="post__data-item">
+                <time datetime="2022-06-09 16:22">09-06-2022</time>
+            </li>
+            <li class="post__data-item">
+                <a href="#">Фишки заполнения </a>
+            </li>
+        </ul>
+        <a class="post__read" href="#">Читать</a>
+    </div>
+</article>
+
+<!-- post3 -->
+<article class="post">
+    <div class="post__header post__header--video">
+        <div class="embed">
+            <iframe src="https://www.youtube.com/embed/4YRG6cMAASI" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="post__content">
+        <h2 class="post__title">
+            <a href="#">50 вопросов по CSS. Собеседование на HTML верстальщика </a>
+        </h2>
+    </div>
+    <div class="post__footer">
+        <ul class="post__data">
+            <li class="post__data-item">
+                <time datetime="2022-06-09 16:22">09-06-2022</time>
+            </li>
+            <li class="post__data-item">
+                <a href="#">Языки программирования </a>
+            </li>
+        </ul>
+        <a class="post__read" href="#">Оставить комментарий</a>
+    </div>
+</article>
+
+<article class="post">
+    <div class="post__header">
+        <img class="post__preview" src="assets/images/post/js.png" alt="JavaScript">
+    </div>
+
+    <div class="post__content">
+        <h2 class="post__title">
+            <a href="#"> JavaScript </a>
+        </h2>
+        <p class="post__text">
+            Мультипарадигменный язык программирования. Поддерживает объектно-ориентированный, императивный и
+            функциональный стили.
+            Является реализацией спецификации ECMAScript.
+
+        </p>
+    </div>
+    <div class="post__footer">
+        <ul class="post__data">
+            <li class="post__data-item">
+                <time datetime="2022-06-09 16:22">09-06-2022</time>
+            </li>
+            <li class="post__data-item">
+                <a href="#">Языки программирования </a>
+            </li>
+        </ul>
+        <a class="post__read" href="#">Читать</a>
+    </div>
+</article>
+
+<!-- страничная навигация -->
+<ul class="pagination">
+    <li class="pagination__item">
+        <a class="pagination__link" href="#">
+            &Leftarrow;
+        </a>
+    </li>
+    <li class="pagination__item">
+        <a class="pagination__link" href="#">1</a>
+    </li>
+    <li class="pagination__item">
+        <a class="pagination__link active" href="#">2</a>
+    </li>
+    <li class="pagination__item">
+        <a class="pagination__link" href="#">3</a>
+    </li>
+    <li class="pagination__item">
+        <a class="pagination__link" href="#">
+            &Rightarrow;
+        </a>
+    </li>
+</ul>
