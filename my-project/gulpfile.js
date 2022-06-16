@@ -1,5 +1,5 @@
 "use strict";
-// необходимые модули для работы 
+
 const {src, dest} = require("gulp");
 const gulp = require("gulp");
 const autoprefixer = require("gulp-autoprefixer");
@@ -89,7 +89,6 @@ function css(cb) {
                 this.emit('end');
             }
         }))
-        // компиляция sass в css, префексы закидываем в папку build
         .pipe(sass({
             includePaths: './node_modules/'
         }))
@@ -104,13 +103,11 @@ function css(cb) {
                 removeAll: true
             }
         }))
-        // убираем комментарии, уменьшаем 
         .pipe(removeComments())
         .pipe(rename({
             suffix: ".min",
             extname: ".css"
         }))
-        // закидываем сжатый файл(2 версия файла) в папку build
         .pipe(dest(path.build.css))
         .pipe(browserSync.reload({stream: true}));
 
@@ -203,7 +200,7 @@ function images(cb) {
     return src(path.src.images)
         .pipe(imagemin([
             imagemin.gifsicle({interlaced: true}),
-            imagemin.mozjpeg({quality: 80, progressive: true}),
+            imagemin.mozjpeg({quality: 95, progressive: true}),
             imagemin.optipng({optimizationLevel: 5}),
             imagemin.svgo({
                 plugins: [
@@ -241,7 +238,8 @@ function watchFiles() {
 }
 
 const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts));
-const watch = gulp.parallel(build, watchFiles, serve);
+const watch = gulp.series(build, gulp.parallel(watchFiles, serve));
+// const watch = gulp.parallel(build, watchFiles, serve);
 
 
 

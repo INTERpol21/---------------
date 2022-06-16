@@ -1,13 +1,17 @@
 .stories {
     display: grid;
     //  колонки
-    grid-template-columns: 140px 140px 140px 140px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     // отступ
     grid-column-gap: 13px;
     // высота
-    grid-template-rows: 190px;
+    grid-template-rows: 200px;
     margin-bottom: 3rem;
-
+    
+    @include breakpoint($mobile-bp){
+        grid-template-columns: 140px 140px 140px 140px;
+        overflow: auto;
+    }
 }
 
 .stories__item {

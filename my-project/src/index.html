@@ -4,7 +4,7 @@ title: Home
 ---
 
 <div class="stories">
-    <div class="stories__item">
+    <div class="stories__item" data-modal="story-modal">
         <img class="stories__preview" src="assets/images/stories/omsk.jpg" alt="Омск">
         <div class="stories__tittle">Город Омск</div>
         <time class="stories__date" datetime="2022-06-08 20:21">08.06.2022</time>
@@ -45,7 +45,7 @@ title: Home
 <!-- post1 -->
 <div class="post">
     <div class="post__content">
-        <p class="post__text">
+        <p class="post__description">
             Lorem ipsum или Рыба текст. Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда
             нужно быстро заполнить макеты или прототипы
             содержимым. Это тестовый контент, который не должен нести никакого смысла, лишь показать наличие самого
@@ -65,15 +65,17 @@ title: Home
 
 <!-- post2 -->
 <article class="post">
-    <div class="post__header">
-        <img class="post__preview" src="assets/images/post/post1.png" alt="Lorem ipsum">
+    <div class="post__header post__header--preview">
+        <a href="text.html">
+            <img class="post__preview" src="assets/images/post/post1.png" alt="Lorem ipsum">
+        </a>
     </div>
 
     <div class="post__content">
         <h2 class="post__title">
-            <a href="#"> Что такое Lorem ipsum или рыба! </a>
+            <a href="text.html"> Что такое Lorem ipsum или рыба! </a>
         </h2>
-        <p class="post__text">
+        <p class="post__description">
             Lorem ipsum — классический текст-«рыба» (условный, зачастую бессмысленный текст-заполнитель, вставляемый в
             макет
             страницы). Является искажённым отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и
@@ -87,16 +89,16 @@ title: Home
                 <time datetime="2022-06-09 16:22">09-06-2022</time>
             </li>
             <li class="post__data-item">
-                <a href="#">Фишки заполнения </a>
+                <a href="text.html">Фишки заполнения </a>
             </li>
         </ul>
-        <a class="post__read" href="#">Читать</a>
+        <a class="post__read" href="text.html">Читать</a>
     </div>
 </article>
 
 <!-- post3 -->
 <article class="post">
-    <div class="post__header post__header--video">
+    <div class="post__header ">
         <div class="embed">
             <iframe src="https://www.youtube.com/embed/4YRG6cMAASI" title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -106,7 +108,7 @@ title: Home
 
     <div class="post__content">
         <h2 class="post__title">
-            <a href="#">50 вопросов по CSS. Собеседование на HTML верстальщика </a>
+            <a href="post.html">50 вопросов по CSS. Собеседование на HTML верстальщика </a>
         </h2>
     </div>
     <div class="post__footer">
@@ -115,7 +117,7 @@ title: Home
                 <time datetime="2022-06-09 16:22">09-06-2022</time>
             </li>
             <li class="post__data-item">
-                <a href="#">Языки программирования </a>
+                <a href="post.html">Языки программирования </a>
             </li>
         </ul>
         <a class="post__read" href="#">Оставить комментарий</a>
@@ -123,15 +125,17 @@ title: Home
 </article>
 
 <article class="post">
-    <div class="post__header">
-        <img class="post__preview" src="assets/images/post/js.png" alt="JavaScript">
+    <div class="post__header post__header--preview">
+        <a href="post.html">
+            <img class="post__preview" src="assets/images/post/js.png" alt="JavaScript">
+        </a>
     </div>
 
     <div class="post__content">
         <h2 class="post__title">
-            <a href="#"> JavaScript </a>
+            <a href="post.html"> JavaScript </a>
         </h2>
-        <p class="post__text">
+        <p class="post__description">
             Мультипарадигменный язык программирования. Поддерживает объектно-ориентированный, императивный и
             функциональный стили.
             Является реализацией спецификации ECMAScript.
@@ -144,10 +148,10 @@ title: Home
                 <time datetime="2022-06-09 16:22">09-06-2022</time>
             </li>
             <li class="post__data-item">
-                <a href="#">Языки программирования </a>
+                <a href="post.html">Языки программирования </a>
             </li>
         </ul>
-        <a class="post__read" href="#">Читать</a>
+        <a class="post__read" href="post.html">Читать</a>
     </div>
 </article>
 

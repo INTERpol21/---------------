@@ -7,7 +7,7 @@
 
     background: $secondary;
     border: none;
-    cursor: pointer;
+    cursor: grab;
 
     border-radius: 3em;
     // наследуем значение шрифта 
@@ -19,12 +19,17 @@
     text-decoration: none;
     transition: background-color .2s linear;
 
+    &:hover {
+        text-decoration: none;
+    }
+
     // Делаем без мексина
     &--red {
         background-color: $red;
         box-shadow: 0 20px 25px -4px rgba($red, .3);
 
-        &:hover {
+        &:hover,
+        &:focus {
             //функция scss darken, делает основной цвет при наведении темнее
             background-color: darken($red, 10%);
         }
@@ -34,9 +39,30 @@
         background-color: $blue;
         box-shadow: 0 20px 25px -4px rgba($blue, .3);
 
-        &:hover {
+        &:hover,
+        &:focus {
             //функция scss darken, делает основной цвет при наведении темнее
             background-color: darken($blue, 10%);
         }
+    }
+
+    &--gold {
+        background-color: $gold;
+        box-shadow: 0 20px 25px -4px rgba($gold, .3);
+
+        &:hover,
+        &:focus {
+            //функция scss darken, делает основной цвет при наведении темнее
+            background-color: darken($gold, 10%);
+        }
+    }
+
+    &--rounded {
+        border-radius: 0.41em;
+    }
+
+    &--sm {
+        padding: 0.8em;
+        ;
     }
 }

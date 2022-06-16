@@ -4,7 +4,16 @@ $white:     #fff;
 $black:     #000000;
 $red:       #ED3024;
 $blue:      #1950e6;
+$gold:      #bf9427;
+
 $z-index-sidebar: 1000;
 $z-index-header:  1000;
+$z-index-modal: 1010;
 
 $sidebar-width: 300px;
+
+// media
+
+$tablet-bp: 991px;
+
+$mobile-bp: 575px;

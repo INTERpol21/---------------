@@ -1,9 +1,28 @@
+.nav--modile{
+    display: none;
+}
+
+.nav {
+    @include breakpoint($tablet-bp) {
+        display: none;
+
+        &--modile {
+            display: block;
+            margin-top: 3rem 0;
+        }
+    }
+
+    
+}
+
 .nav__item {
     position: relative;
 
     &:hover {
         .nav__link {
             background-color: $blue;
+            text-decoration: none;
+
         }
 
         // При наведение(hover), будем показывать дочерний класс(.>subnav)
@@ -12,10 +31,22 @@
         }
 
     }
+
+    @include breakpoint($tablet-bp) {
+        &:hover {
+            .nav__link {
+                background: none;
+            }
+        }
+    }
 }
 
 .nav__list {
     display: flex;
+
+    @include breakpoint($tablet-bp) {
+        flex-direction: column;
+    }
 }
 
 .nav__link {
@@ -50,5 +81,15 @@
             transform: translateY(-50%);
 
         }
+
+    }
+
+
+    @include breakpoint($tablet-bp) {
+        padding-left: 0;
+        padding-right: 0;
+
+        font-size: 1.6rem;
+
     }
 }

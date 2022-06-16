@@ -16,35 +16,39 @@
 
     box-shadow: 0 6px 8px rgba($black, .2);
 
-    .subnav__link {
-        font-size: 1.2rem;
-        color: $white;
+    @include breakpoint($tablet-bp) {
+        position: static;
+        width: 100%;
 
-        display: block;
-        text-decoration: none;
-        padding: 0.45rem 1.2rem;
-
-        transition: background-color 0.2s ease-in-out;
-
-        &:hover {
-            background-color: darken($blue, 10%);
-        }
-
+        background-color: transparent;
+        box-shadow: none;
     }
 }
 
-// .subnav__link{
-//     font-size: 1.2rem;
-//     color: $white;
 
-//     display: block;
-//     text-decoration: none;
-//     padding:0.45rem 1.2rem;
+.subnav__link {
+    font-size: 1.2rem;
+    color: $white;
 
-//     transition: background-color 0.2s ease-in-out;
+    display: block;
+    text-decoration: none;
+    padding: 0.45rem 1.2rem;
 
-//     &:hover{
-//        background-color: darken($blue, 10%); 
-//     }
+    transition: background-color 0.2s ease-in-out;
 
-// }
+    &:hover {
+        background-color: darken($blue, 10%);
+        text-decoration: none;
+    }
+
+    @include breakpoint($tablet-bp) {
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 1.5rem;
+
+        &:hover{
+            background: none;
+        }
+    }
+
+}

@@ -2,7 +2,9 @@
 // Блок для редактирования встраиваемых видео 
 
 
-.embed {
+.embed,
+.fr-video {
+    display: block;
     position: relative;
     overflow: hidden;
 
