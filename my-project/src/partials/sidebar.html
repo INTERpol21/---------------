@@ -4,24 +4,32 @@
     </div>
     <div class="sidebar__content">
         <div class="profile">
-            <img class="profile__avatar" src="assets/images/Myphoto.jpg" alt="Аватрка пользователя">
-            <div class="profile__name">Антон Журавлев</div>
-            <div class="profile__prof">Блог будущего Front-end разработчика</div>
+            <picture>
+                <!-- фото для мобилки -->
+                <source srcset="assets/images/mem.jpg" media="(max-width: 575px)">
+                <img class="profile__avatar" src="assets/images/Myphoto.jpg" alt="Аватрка пользователя">
+            </picture>
+
+            <div class="profile__header">
+                <div class="profile__name">Антон Журавлев</div>
+                <div class="profile__prof">Блог будущего Front-end разработчика</div>
+            </div>
+
 
             <ul class="social">
                 <li class="social__item">
-                    <a class="social__link" href="#" target="_blank">
+                    <a class="social__link" href="https://www.instagram.com/inter.pol21/" target="_blank">
                         <img src="assets/images/instagram.svg" alt="Instagram">
                     </a>
                 </li>
                 <li class="social__item">
-                    <a class="social__link" href="#" target="_blank">
+                    <a class="social__link" href="https://vk.com/toxa199821" target="_blank">
                         <img src="assets/images/vk.svg" alt="Vk">
                     </a>
                 </li>
                 <li class="social__item">
                     <a class="social__link" href="#" target="_blank">
-                        <img src="assets/images/pinterest.svg" alt="Pinterest">
+                        <img src="assets/images/onlyfans.svg" alt="Onlyfans">
                     </a>
                 </li>
             </ul>
@@ -31,11 +39,48 @@
                     HTML/CSS/JS.
                 </p>
             </div>
-
         </div>
+        <nav class="nav nav--modile">
+            <ul class="nav__list">
+                <li>
+                    <a class="nav__link" href="index.html">Главная</a>
+                </li>
+                <!-- nav__item создан, что бы при наведение на кнопку навигации, после блок не исчезал -->
+                <li class="nav__item">
+                    <a class="nav__link has-subnav" href="#">Статьи</a>
+
+                    <ul class="subnav">
+                        <li>
+                            <a class="subnav__link" href="Post.html">Языки программирования</a>
+                        </li>
+                        <li>
+                            <a class="subnav__link" href="works.html">Проекты</a>
+                        </li>
+                        <li>
+                            <a class="subnav__link" href="text.html">Фишки</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a class="nav__link" href="index.html">Обо мне</a>
+                </li>
+
+                <li>
+                    <a class="nav__link" href="index.html">Реклама</a>
+                </li>
+                <li>
+                    <a class="nav__link" href="profile.html">Профиль</a>
+                </li>
+                <li>
+                    <a class="nav__link" href="index.html">Выйти</a>
+                </li>
+            </ul>
+        </nav>
+
     </div> <!-- sidebar__content -->
     <div class="sidebar__footer">
-        <a class="btn btn--red" href="#">Мои работы </a>
-        <button class="btn btn--blue" type="button">Написать мне</button>
+        <a class="btn btn--red" href="works.html">Мои работы </a>
+        <button class="btn btn--blue" type="button" data-modal="contact-modal">Написать мне</button>
     </div>
 </aside>
