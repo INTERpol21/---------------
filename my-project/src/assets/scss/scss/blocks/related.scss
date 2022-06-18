@@ -1,0 +1,58 @@
+.related {
+    border-bottom: 1px solid #e4dcdc;
+    padding-bottom: .5rem;
+}
+
+// .related__title{
+//     margin-bottom: 2rem;
+
+//     line-height: 1.6rem;
+
+//     font-size: 1.6rem;
+//     font-weight: 500;
+//     color: $white;
+
+//     // ограничем 1 строкой, большой текст в ссылке
+//     // показывает точки контента, который вылазит за блок
+//     text-overflow: ellipsis;
+//     // скрываем лишнее
+//     overflow: hidden;
+//     // запрешаем перенос на вторую строку
+//     white-space: nowrap;
+
+// }
+
+.related__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include breakpoint($mobile-bp) {
+        flex-direction: column;
+    }
+}
+
+.related__list-item {
+    margin-bottom: 2.5rem;
+    width: 50%;
+
+    @include breakpoint($mobile-bp) {
+        width: 100%;
+    }
+}
+
+.related__list-title {
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: $gold;
+    white-space: nowrap;
+
+    a {
+        color: inherit;
+    }
+
+}
+
+.related__list-date {
+    font-size: 1.2rem;
+    color: #828282;
+}

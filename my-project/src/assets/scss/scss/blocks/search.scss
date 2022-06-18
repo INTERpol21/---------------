@@ -1,0 +1,33 @@
+.search {
+    background-color: $primary;
+    max-width: 21rem;
+    width: 100%;
+}
+
+
+.search__input {
+    display: block;
+    width: 100%;
+    // Убераем бек и бордер
+    background: transparent;
+    border: none;
+
+    padding: 1.2rem 2rem;
+
+    // наследуем шрифты 
+    font-family: inherit;
+    font-size: 1.2rem;
+    color: $white;
+
+    &::placeholder {
+        color: rgba($white, .4);
+    }
+
+    @include breakpoint($tablet-bp){
+        font-size: 1.6rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        height: 4rem;
+    }
+}

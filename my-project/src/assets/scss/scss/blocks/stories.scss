@@ -1,0 +1,95 @@
+.stories {
+    display: grid;
+    //  колонки
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    // отступ
+    grid-column-gap: 13px;
+    // высота
+    grid-template-rows: 200px;
+    margin-bottom: 3rem;
+    
+    @include breakpoint($mobile-bp){
+        grid-template-columns: 140px 140px 140px 140px;
+        overflow: auto;
+    }
+}
+
+.stories__item {
+    cursor: pointer;
+
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba($black, .2);
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+
+        background-image: linear-gradient(to bottom,
+                rgba($black, 0.8),
+                rgba($black, 0) 50%,
+                rgba($black, 0.8), );
+
+
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        top: 0;
+        left: 0;
+
+    }
+
+    &:hover {
+        .stories__preview {
+            // Увеличиваем изображение
+            transform: scale(1.3);
+            // определяет продолжительность выполнения анимации
+            transition-duration: 5s;
+        }
+    }
+}
+
+.stories__preview {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    // плавное увеличение
+    transition: transform 1s ease-in-out;
+}
+
+.stories__tittle,
+.stories__date {
+    width: 100%;
+    padding: 1.4rem;
+
+    font-size: 1.2rem;
+    line-height: 1.3;
+    color: $white;
+
+    position: absolute;
+    left: 0;
+
+    z-index: 3;
+}
+
+.stories__tittle {
+
+    top: 0;
+}
+
+
+.stories__date {
+
+    bottom: 0;
+    text-align: right;
+}

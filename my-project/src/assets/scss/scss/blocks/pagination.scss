@@ -1,0 +1,45 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+
+    @include breakpoint($tablet-bp){
+        margin-top: 5rem;
+    }
+}
+
+.pagination__item {
+    margin: 0 .5rem;
+}
+
+.pagination__link {
+    display: block;
+    width: 40px;
+    height: 40px;
+
+    // отступ для выравнивания элиментов по центтру 
+    line-height: 4rem;
+
+    background-color: #0D0D0D;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 1.4rem;
+    color: $white;
+
+    transition: background-color .3s linear;
+
+    box-shadow: 0 0 10px rgba($white, .15);
+
+    &:hover {
+        // делаем светлее 
+        background-color: lighten(#0D0D0D, 20%);
+    }
+
+    &.active {
+        background-color: $blue;
+        box-shadow: 0 0 10px rgba($blue, .15);
+    }
+
+}
