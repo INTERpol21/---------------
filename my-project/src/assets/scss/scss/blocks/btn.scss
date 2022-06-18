@@ -1,0 +1,68 @@
+.btn {
+    // inline-block для корректной работы padding
+    display: inline-block;
+    vertical-align: top;
+    // Пишем в em для того что бы в будущем, от изменения шрифта, увеличивался padding
+    padding: 1.1em 2.1em;
+
+    background: $secondary;
+    border: none;
+    cursor: grab;
+
+    border-radius: 3em;
+    // наследуем значение шрифта 
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.1;
+    color: $white;
+    text-decoration: none;
+    transition: background-color .2s linear;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    // Делаем без мексина
+    &--red {
+        background-color: $red;
+        box-shadow: 0 20px 25px -4px rgba($red, .3);
+
+        &:hover,
+        &:focus {
+            //функция scss darken, делает основной цвет при наведении темнее
+            background-color: darken($red, 10%);
+        }
+    }
+
+    &--blue {
+        background-color: $blue;
+        box-shadow: 0 20px 25px -4px rgba($blue, .3);
+
+        &:hover,
+        &:focus {
+            //функция scss darken, делает основной цвет при наведении темнее
+            background-color: darken($blue, 10%);
+        }
+    }
+
+    &--gold {
+        background-color: $gold;
+        box-shadow: 0 20px 25px -4px rgba($gold, .3);
+
+        &:hover,
+        &:focus {
+            //функция scss darken, делает основной цвет при наведении темнее
+            background-color: darken($gold, 10%);
+        }
+    }
+
+    &--rounded {
+        border-radius: 0.41em;
+    }
+
+    &--sm {
+        padding: 0.8em;
+        ;
+    }
+}
